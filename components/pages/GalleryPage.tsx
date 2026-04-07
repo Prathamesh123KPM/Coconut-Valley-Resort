@@ -1,0 +1,12 @@
+import React from 'react';
+import Gallery from '../Gallery';
+
+const GalleryPage: React.FC = () => {
+    return (
+        <div className="pt-20">
+            <Gallery />
+        </div>
+    );
+};
+
+export default GalleryPage;

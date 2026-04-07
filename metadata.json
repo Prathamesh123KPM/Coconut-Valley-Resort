@@ -1,0 +1,7 @@
+{
+  "name": "Coconut Valley Resort - Luxury Retreat",
+  "description": "A high-end, modern resort website for Coconut Valley Resort at Kelva Beach, Palghar, featuring luxury rooms, amenities, and a Gemini-powered concierge.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

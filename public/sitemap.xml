@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Static Pages -->
+  <url><loc>https://coconutvalley.in/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://coconutvalley.in/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://coconutvalley.in/rooms</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://coconutvalley.in/amenities</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://coconutvalley.in/events</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://coconutvalley.in/gallery</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://coconutvalley.in/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Blog Pages -->
+  <url><loc>https://coconutvalley.in/blog</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://coconutvalley.in/blog/best-resorts-in-palghar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://coconutvalley.in/blog/best-resorts-in-kelva-beach</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://coconutvalley.in/blog/best-one-day-resort-in-palghar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://coconutvalley.in/blog/best-family-resort-near-palghar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://coconutvalley.in/blog/corporate-picnic-resorts-near-mumbai</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://coconutvalley.in/blog/1-day-corporate-outing-near-mumbai</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Dynamic Room Pages -->
+  <url><loc>https://coconutvalley.in/room/tropical-bliss</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://coconutvalley.in/room/night-elegance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://coconutvalley.in/room/triangle-room</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://coconutvalley.in/room/wooden-dormitory</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://coconutvalley.in/room/deluxe-room</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://coconutvalley.in/room/jacuzzi-bliss</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://coconutvalley.in/room/star-paradise</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://coconutvalley.in/room/wooden-room</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://coconutvalley.in/room/family-dormitory</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>
