@@ -3,6 +3,7 @@ import Events from '../Events';
 import { Calendar, Music, Camera, MapPin, Sun, Wind, Waves } from 'lucide-react';
 import cv5 from '../../cv (5).webp';
 import cv6 from '../../cv (6).webp';
+import weddingImg from '../../coconutwedding1.webp';
 
 const EventsPage: React.FC = () => {
     const categories = [
@@ -28,7 +29,7 @@ const EventsPage: React.FC = () => {
             <div className="pt-24">
                 {/* Immersive Header */}
                 <div className="h-[60vh] relative flex items-center justify-center overflow-hidden">
-                    <img src={cv5} alt="Corporate and family events setup at Coconut Valley Resort" className="absolute w-full h-full object-cover brightness-50" />
+                    <img loading="lazy" src={weddingImg} alt="Corporate and family events setup at Coconut Valley Resort" className="absolute w-full h-full object-cover brightness-50" />
                     <div className="relative z-10 text-center text-white px-6">
                         <h1 className="text-5xl md:text-8xl font-bold mb-6 tracking-tighter">Beyond Staying</h1>
                         <p className="text-xl md:text-2xl font-light max-w-2xl mx-auto text-emerald-50">
@@ -71,7 +72,7 @@ const EventsPage: React.FC = () => {
                             <div className="lg:w-1/2">
                                 <div className="relative">
                                     <div className="absolute -top-10 -left-10 w-40 h-40 bg-emerald-100 rounded-full -z-10"></div>
-                                    <img src={cv6} alt="Delicious local cuisine and dining experience at Coconut Valley Resort" className="rounded-[3rem] shadow-2xl relative z-10" />
+                                    <img loading="lazy" src={cv6} alt="Delicious local cuisine and dining experience at Coconut Valley Resort" className="rounded-[3rem] shadow-2xl relative z-10" />
                                 </div>
                             </div>
                             <div className="lg:w-1/2">

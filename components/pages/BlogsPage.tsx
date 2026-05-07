@@ -3,11 +3,71 @@ import { Link } from 'react-router-dom';
 import { Calendar, ArrowRight, Clock, User } from 'lucide-react';
 import kelvaImg from '../../traiangleroom (1).webp';
 import oneDayImg from '../../coconutpool.webp';
-import palgharImg from '../../coconuthome.webp';
-import familyImg from '../../familydormitory.webp';
+import familyImg from '../../Family Dorm 1 .jpg';
 import corporateImg from '../../coconutwedding1.webp';
+import ecoPreview from '../../jacuzzi (1).webp';
+import foodPreview from '../../coconutabout.webp';
+import weddingPreview from '../../coconutwedding.webp';
+import deluxeRoomImg from '../../deluxeroom (1).webp';
+import tropicalImg from '../../tropical (3).webp';
+import boatImg from '../../coconutboat.webp';
+const palgharImg = '/coconuthome.webp';
 
 const BLOG_POSTS = [
+    {
+        id: 'hotels-near-kelva-beach-palghar-guide',
+        title: 'Top Hotels Near Kelva Beach, Palghar: Your Ultimate Accommodation Guide',
+        excerpt: 'Looking for the best hotels near Kelva Beach, Palghar? Discover comfortable accommodations, modern amenities, and breathtaking coastal views for your perfect stay at Coconut Valley Resort.',
+        image: corporateImg,
+        date: 'May 5, 2026',
+        author: 'Coconut Valley',
+        readTime: '5 min read'
+    },
+    {
+        id: 'best-resort-near-kelva-beach-getaway',
+        title: 'The Best Resort Near Kelva Beach for Your Next Weekend Getaway',
+        excerpt: 'Planning a trip to the coast? Find out what makes Coconut Valley Resort the absolute best resort near Kelva Beach for couples, families, and corporate outings.',
+        image: kelvaImg,
+        date: 'May 5, 2026',
+        author: 'Coconut Valley',
+        readTime: '6 min read'
+    },
+    {
+        id: 'nature-resorts-near-palghar-kelva',
+        title: 'Nature Resorts Near Palghar: Escape to the Greenery at Kelva Beach',
+        excerpt: 'Reconnect with nature at the most serene nature resorts near Palghar. Experience the lush green surroundings, tranquil environment, and premium hospitality at Coconut Valley Resort.',
+        image: palgharImg,
+        date: 'May 5, 2026',
+        author: 'Coconut Valley',
+        readTime: '5 min read'
+    },
+    {
+        id: 'eco-friendly-luxury-palghar',
+        title: 'Eco-Friendly Luxury: Why Sustainable Stays are the Future of Travel at Palghar',
+        excerpt: 'Discover how Coconut Valley Resort blends rustic timber architecture with modern sustainability to create a guilt-free luxury experience near Mumbai.',
+        image: ecoPreview,
+        date: 'April 21, 2026',
+        author: 'Coconut Valley',
+        readTime: '6 min read'
+    },
+    {
+        id: 'destination-weddings-kelva-beach',
+        title: 'Your Dream Beach Wedding: A Complete Guide to Destination Weddings at Kelva Beach',
+        excerpt: 'From sunset ceremonies under coconut palms to grand receptions by the waves, discover why Kelva Beach is becoming the premier destination for boutique weddings.',
+        image: weddingPreview,
+        date: 'April 21, 2026',
+        author: 'Coconut Valley',
+        readTime: '7 min read'
+    },
+    {
+        id: 'coastal-cuisine-palghar',
+        title: 'A Culinary Journey through Palghar: Authentic Flavors at Coconut Valley',
+        excerpt: 'Explore the rich coastal flavors of Palghar. From traditional local delicacies to international favorites, embark on a gastronomic adventure at our fine dining restaurant.',
+        image: foodPreview,
+        date: 'April 21, 2026',
+        author: 'Coconut Valley',
+        readTime: '5 min read'
+    },
     {
         id: 'best-resorts-in-kelva-beach',
         title: 'Best Resorts in Kelva Beach Near Palghar for Family & Couples',
@@ -48,7 +108,7 @@ const BLOG_POSTS = [
         id: 'best-one-day-resort-in-palghar',
         title: 'Best One Day Resort in Palghar Near Kelva Beach for Weekend Fun',
         excerpt: 'Short on time? Experience the ultimate one-day picnic in Palghar with our affordable day outing packages including breakfast, pool, and lunch.',
-        image: oneDayImg,
+        image: boatImg,
         date: 'March 20, 2026',
         author: 'Coconut Valley',
         readTime: '4 min read'
@@ -57,7 +117,7 @@ const BLOG_POSTS = [
         id: 'best-resorts-in-palghar',
         title: 'Best Resorts in Palghar: Why Coconut Valley Resort is a Perfect Getaway',
         excerpt: 'Discover why travelers are choosing Kelva Beach and Coconut Valley Resort for their ultimate weekend escapes from Mumbai and Pune.',
-        image: palgharImg,
+        image: tropicalImg,
         date: 'March 18, 2026',
         author: 'Coconut Valley',
         readTime: '6 min read'

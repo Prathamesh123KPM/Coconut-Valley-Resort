@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckCircle, Users, Briefcase, Coffee, Star, ArrowRight, Shield, Target } from 'lucide-react';
-import aboveImg from '../../coconutabove.webp';
+const aboveImg = '/coconutabove.webp';
 import dormImg from '../../woodendormitory (1).webp';
 import playImg from '../../coconutplay.webp';
 import poolImg from '../../coconutpool.webp';
@@ -12,7 +12,7 @@ const CorporatePicnicPalghar: React.FC = () => {
             {/* Hero Section */}
             <div className="relative pt-32 pb-20 bg-slate-900 overflow-hidden">
                 <div className="absolute inset-0 opacity-30">
-                    <img src={eventImg} alt="Corporate Event Setup in Palghar" className="w-full h-full object-cover" />
+                    <img loading="lazy" src={eventImg} alt="Corporate Event Setup in Palghar" className="w-full h-full object-cover" />
                 </div>
                 <div className="container relative mx-auto px-6 text-center z-10">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 text-slate-100 text-sm font-medium mb-6">
@@ -42,7 +42,7 @@ const CorporatePicnicPalghar: React.FC = () => {
                         </p>
 
                         <div className="my-10 rounded-2xl overflow-hidden shadow-lg">
-                            <img src={aboveImg} alt="Aerial View of our 5-acre Coconut Grove" className="w-full h-auto object-cover" />
+                            <img loading="lazy" src={aboveImg} alt="Aerial View of our 5-acre Coconut Grove" className="w-full h-auto object-cover" />
                         </div>
 
                         <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Features Designed for Corporate Excellence</h2>
@@ -69,7 +69,7 @@ const CorporatePicnicPalghar: React.FC = () => {
                         </div>
 
                         <div className="my-10 rounded-2xl overflow-hidden shadow-lg">
-                            <img src={dormImg} alt="Spacious Dormitories for Corporate Groups" className="w-full h-auto object-cover" />
+                            <img loading="lazy" src={dormImg} alt="Spacious Dormitories for Corporate Groups" className="w-full h-auto object-cover" />
                         </div>
 
                         <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">A Refreshing Itinerary</h2>
@@ -104,11 +104,11 @@ const CorporatePicnicPalghar: React.FC = () => {
                         </ul>
 
                         <div className="my-10 rounded-2xl overflow-hidden shadow-lg grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <img src={playImg} alt="Outdoor Team Building Activities" className="w-full h-64 object-cover" />
-                            <img src={poolImg} alt="Relaxing Pool for Corporate Groups" className="w-full h-64 object-cover" />
+                            <img loading="lazy" src={playImg} alt="Outdoor Team Building Activities" className="w-full h-64 object-cover" />
+                            <img loading="lazy" src={poolImg} alt="Relaxing Pool for Corporate Groups" className="w-full h-64 object-cover" />
                         </div>
 
-                        <div className="bg-slate-900 text-white rounded-[2.5rem] p-10 my-16 border border-slate-800">
+                        <div className="bg-slate-900 text-white rounded-[2.5rem] p-10 my-16 border border-slate-800 text-center flex flex-col items-center">
                             <h3 className="text-3xl font-bold mb-4">Host Your Next Event with Us</h3>
                             <p className="text-slate-400 text-lg mb-8 max-w-xl">
                                 From one-day picnics to multi-day residential treks, we offer customized corporate packages that fit your company's needs and budget.

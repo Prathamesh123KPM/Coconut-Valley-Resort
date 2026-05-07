@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckCircle, MapPin, Star, Calendar } from 'lucide-react';
-import homeImg from '../../coconuthome.webp';
+import heroImg from '../../tropical (3).webp';
 import poolImg from '../../coconutpool.webp';
 import roomImg from '../../deluxeroom (1).webp';
 
@@ -10,7 +10,7 @@ const BestResortsPalghar: React.FC = () => {
             {/* Hero Section */}
             <div className="relative pt-32 pb-20 bg-emerald-900 overflow-hidden">
                 <div className="absolute inset-0 opacity-20">
-                    <img src={homeImg} alt="Coconut Valley Resort Exterior" className="w-full h-full object-cover" />
+                    <img loading="lazy" src={heroImg} alt="Coconut Valley Resort Exterior" className="w-full h-full object-cover" />
                 </div>
                 <div className="container relative mx-auto px-6 text-center z-10">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-800/50 text-emerald-100 text-sm font-medium mb-6">
@@ -41,7 +41,7 @@ const BestResortsPalghar: React.FC = () => {
                         </p>
 
                         <div className="my-10 rounded-2xl overflow-hidden shadow-lg">
-                            <img src={poolImg} alt="Beautiful Swimming Pool at Coconut Valley Resort" className="w-full h-auto object-cover" />
+                            <img loading="lazy" src={poolImg} alt="Beautiful Swimming Pool at Coconut Valley Resort" className="w-full h-auto object-cover" />
                         </div>
 
                         <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Why Coconut Valley Resort Stands Out</h2>
@@ -89,7 +89,7 @@ const BestResortsPalghar: React.FC = () => {
                         </ul>
 
                         <div className="my-10 rounded-2xl overflow-hidden shadow-lg">
-                            <img src={roomImg} alt="Luxurious Accommodation at Coconut Valley Resort" className="w-full h-auto object-cover" />
+                            <img loading="lazy" src={roomImg} alt="Luxurious Accommodation at Coconut Valley Resort" className="w-full h-auto object-cover" />
                         </div>
 
                         <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">More Than Just a Stay</h2>
@@ -97,12 +97,12 @@ const BestResortsPalghar: React.FC = () => {
                             When searching for the <strong>best resorts in Palghar</strong>, modern travelers expect more than just a clean room. At Coconut Valley Resort, we offer an experience. From relaxing by our pristine pool to enjoying evening walks under the starlit sky, we ensure every moment of your stay is memorable.
                         </p>
 
-                        <div className="bg-emerald-50 rounded-2xl p-8 my-10 border border-emerald-100">
-                            <h3 className="text-2xl font-bold text-emerald-900 mb-4 flex items-center gap-2">
+                        <div className="bg-emerald-50 rounded-2xl p-8 my-10 border border-emerald-100 text-center flex flex-col items-center">
+                            <h3 className="text-2xl font-bold text-emerald-900 mb-4 flex items-center justify-center gap-2">
                                 <Star className="text-amber-500 fill-amber-500" />
                                 Ready to experience it yourself?
                             </h3>
-                            <p className="text-emerald-800 mb-6">
+                            <p className="text-emerald-800 mb-6 max-w-2xl">
                                 Don't just take our word for it. Book your stay today and discover your new favorite coastal sanctuary just a short drive from the city.
                             </p>
                             <a href="https://wa.me/917219084299" target="_blank" rel="noopener noreferrer" className="inline-block bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-3 px-8 rounded-full transition-colors">

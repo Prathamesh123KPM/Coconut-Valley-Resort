@@ -4,6 +4,7 @@ import Hero from './Hero';
 import About from './About';
 import Tariff from './Tariff';
 import WeddingBanner from './WeddingBanner';
+import InstagramFeed from './InstagramFeed';
 import Testimonials from './Testimonials';
 import RoomSwitcher from './RoomSwitcher';
 
@@ -50,6 +51,8 @@ const Home: React.FC = () => {
             </div>
 
             <WeddingBanner />
+
+            <InstagramFeed />
 
             <Testimonials />
 

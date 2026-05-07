@@ -9,24 +9,19 @@ const Hero: React.FC = () => {
   useEffect(() => {
     const updateVideo = () => {
       const isMobile = window.innerWidth < 768;
-
-      // Disable background video completely on mobile to save bandwidth and improve LCP
-      if (isMobile) {
-        setVideoUrl('');
-        return;
-      }
+      const videoIdToUse = isMobile ? mobileVideoId : desktopVideoId;
 
       // Load YouTube video only when the browser is idle to minimize TBT (Total Blocking Time)
       const loadVideo = () => {
-        setVideoUrl(`https://www.youtube.com/embed/${desktopVideoId}?autoplay=1&mute=1&loop=1&playlist=${desktopVideoId}&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1`);
+        setVideoUrl(`https://www.youtube.com/embed/${videoIdToUse}?autoplay=1&mute=1&loop=1&playlist=${videoIdToUse}&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1`);
       };
 
       if ('requestIdleCallback' in window) {
         window.requestIdleCallback(() => {
-          setTimeout(loadVideo, 2000); // Wait 2s after idle to be safe
+          loadVideo(); // Load immediately when browser is idle
         });
       } else {
-        setTimeout(loadVideo, 4000); // Fallback for browsers without idle callback
+        setTimeout(loadVideo, 500); // Short fallback delay
       }
     };
 
@@ -66,25 +61,32 @@ const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-emerald-950/5 z-10"></div>
       </div>
 
-      <div className="relative h-full container mx-auto px-6 flex flex-col justify-center">
+      <div className="relative z-20 h-full container mx-auto px-6 flex flex-col justify-center">
         <div className="max-w-3xl animate-in fade-in slide-in-from-left duration-1000">
           <span className="inline-block text-emerald-400 font-bold tracking-[0.3em] uppercase text-xs md:text-sm mb-6 drop-shadow-sm">
-            Luxury Beach & Nature Retreat
+            The <strong className="font-bold text-emerald-300">Best Resort Near Kelva Beach</strong>
           </span>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl text-white font-bold leading-tight mb-6">
+          <h1 className="text-4xl md:text-7xl lg:text-8xl text-white font-bold leading-tight mb-6">
             Where Luxury <br />
             <span className="italic font-light">Meets Nature</span>
           </h1>
-          <p className="text-lg md:text-xl text-white mb-10 max-w-xl leading-relaxed drop-shadow-md opacity-90">
-            Escape to a serene beachfront resort just minutes from Kelva Beach. Rediscover calm in nature's lap with premium amenities and warm hospitality.
+          <p className="text-base md:text-xl text-white mb-8 md:mb-10 max-w-xl leading-relaxed drop-shadow-md opacity-90">
+            Escape to a serene beachfront <strong className="text-emerald-100 font-bold">Kelva Resort</strong> just minutes away. Rated among the top <strong className="text-emerald-100 font-bold">Hotels Near Kelva Beach, Palghar</strong>, offering premium amenities and warm hospitality.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all group">
+            <a
+              href="https://wa.me/917219084299?text=I'm interested in booking a stay at Coconut Valley Resort"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 text-sm md:text-base md:px-8 md:py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all group shadow-xl">
               Book Your Stay Now
               <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all">
+            </a>
+            <button
+              onClick={() => document.getElementById('tariff')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-5 py-3 text-sm md:text-base md:px-8 md:py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all"
+            >
               <Play size={18} className="fill-white" />
               Explore Rooms
             </button>

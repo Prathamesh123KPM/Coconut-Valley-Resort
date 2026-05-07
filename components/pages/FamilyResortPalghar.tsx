@@ -1,10 +1,10 @@
 import React from 'react';
 import { CheckCircle, Users, Baby, Palmtree, Star, ArrowRight, Heart, MapPin } from 'lucide-react';
-import familyImg from '../../familydormitory.webp';
+import familyImg from '../../Family Dorm 1 .jpg';
 import playImg from '../../coconutplay.webp';
 import jhulaImg from '../../coconutjhula.webp';
-import homeImg from '../../coconuthome.webp';
-import aboveImg from '../../coconutabove.webp';
+const homeImg = '/coconuthome.webp';
+const aboveImg = '/coconutabove.webp';
 
 const FamilyResortPalghar: React.FC = () => {
     return (
@@ -12,7 +12,7 @@ const FamilyResortPalghar: React.FC = () => {
             {/* Hero Section */}
             <div className="relative pt-32 pb-20 bg-emerald-900 overflow-hidden">
                 <div className="absolute inset-0 opacity-20">
-                    <img src={aboveImg} alt="Aerial View of Kelva Beach Near Palghar" className="w-full h-full object-cover" />
+                    <img loading="lazy" src={familyImg} alt="Aerial View of Kelva Beach Near Palghar" className="w-full h-full object-cover" />
                 </div>
                 <div className="container relative mx-auto px-6 text-center z-10">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-800/50 text-emerald-100 text-sm font-medium mb-6">
@@ -42,7 +42,7 @@ const FamilyResortPalghar: React.FC = () => {
                         </p>
 
                         <div className="my-10 rounded-2xl overflow-hidden shadow-lg">
-                            <img src={aboveImg} alt="Peaceful Kelva Beach Shoreline" className="w-full h-auto object-cover" />
+                            <img loading="lazy" src={aboveImg} alt="Peaceful Kelva Beach Shoreline" className="w-full h-auto object-cover" />
                         </div>
 
                         <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Family-Centric Stays at Coconut Valley Resort</h2>
@@ -72,7 +72,7 @@ const FamilyResortPalghar: React.FC = () => {
                         </div>
 
                         <div className="my-10 rounded-2xl overflow-hidden shadow-lg">
-                            <img src={familyImg} alt="Large Family Dormitory Interior" className="w-full h-auto object-cover" />
+                            <img loading="lazy" src={familyImg} alt="Large Family Dormitory Interior" className="w-full h-auto object-cover" />
                         </div>
 
                         <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Unforgettable Family Activities</h2>
@@ -107,8 +107,8 @@ const FamilyResortPalghar: React.FC = () => {
                         </ul>
 
                         <div className="my-10 rounded-2xl overflow-hidden shadow-lg grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <img src={playImg} alt="Kids playing in the lawns" className="w-full h-64 object-cover" />
-                            <img src={jhulaImg} alt="Traditional swings for family relaxation" className="w-full h-64 object-cover" />
+                            <img loading="lazy" src={playImg} alt="Kids playing in the lawns" className="w-full h-64 object-cover" />
+                            <img loading="lazy" src={jhulaImg} alt="Traditional swings for family relaxation" className="w-full h-64 object-cover" />
                         </div>
 
                         <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Delicious Coastal Cravings</h2>
@@ -116,7 +116,7 @@ const FamilyResortPalghar: React.FC = () => {
                             No family trip is complete without great food. We serve authentic Maharashtrian and Konkan-style meals prepared with fresh, local ingredients. From crispy fried fish to traditional vegetarian thalis, our menu is designed to satisfy the whole family.
                         </p>
 
-                        <div className="bg-emerald-50 rounded-[2.5rem] p-10 my-16 border border-emerald-100 relative overflow-hidden">
+                        <div className="bg-emerald-50 rounded-[2.5rem] p-10 my-16 border border-emerald-100 relative overflow-hidden text-center flex flex-col items-center">
                             <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
                                 <Palmtree size={120} />
                             </div>
@@ -124,7 +124,7 @@ const FamilyResortPalghar: React.FC = () => {
                             <p className="text-emerald-800 text-lg mb-8 max-w-xl">
                                 Join hundreds of happy families who have made Coconut Valley Resort their favorite home away from home in Palghar.
                             </p>
-                            <div className="flex flex-wrap gap-4">
+                            <div className="flex flex-wrap justify-center gap-4">
                                 <a href="https://wa.me/917219084299" target="_blank" rel="noopener noreferrer" className="bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-4 px-10 rounded-full transition-all flex items-center gap-2 shadow-lg hover:scale-105 active:scale-95">
                                     Book Now via WhatsApp
                                     <ArrowRight size={20} />

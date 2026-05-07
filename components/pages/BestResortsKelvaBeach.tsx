@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckCircle, MapPin, Star, Calendar, Heart, Users, Home as HomeIcon } from 'lucide-react';
-import homeImg from '../../coconuthome.webp';
+const homeImg = '/coconuthome.webp';
 import poolImg from '../../coconutpool.webp';
 import roomImg from '../../deluxeroom (1).webp';
 import triangleImg from '../../traiangleroom (1).webp';
@@ -13,7 +13,7 @@ const BestResortsKelvaBeach: React.FC = () => {
             {/* Hero Section */}
             <div className="relative pt-32 pb-20 bg-emerald-900 overflow-hidden">
                 <div className="absolute inset-0 opacity-20">
-                    <img src={homeImg} alt="Coconut Valley Resort - Best Kelva Beach Resort" className="w-full h-full object-cover" />
+                    <img loading="lazy" src={homeImg} alt="Coconut Valley Resort - Best Kelva Beach Resort" className="w-full h-full object-cover" />
                 </div>
                 <div className="container relative mx-auto px-6 text-center z-10">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-800/50 text-emerald-100 text-sm font-medium mb-6">
@@ -43,8 +43,8 @@ const BestResortsKelvaBeach: React.FC = () => {
                         </p>
 
                         <div className="my-10 rounded-2xl overflow-hidden shadow-lg grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <img src={poolImg} alt="Sparkling Pool at Coconut Valley Resort" className="w-full h-64 object-cover" />
-                            <img src={triangleImg} alt="Unique Triangle Rooms for Couples" className="w-full h-64 object-cover" />
+                            <img loading="lazy" src={poolImg} alt="Sparkling Pool at Coconut Valley Resort" className="w-full h-64 object-cover" />
+                            <img loading="lazy" src={triangleImg} alt="Unique Triangle Rooms for Couples" className="w-full h-64 object-cover" />
                         </div>
 
                         {/* Family Section */}
@@ -88,7 +88,7 @@ const BestResortsKelvaBeach: React.FC = () => {
                         </div>
 
                         <div className="my-10 rounded-2xl overflow-hidden shadow-lg">
-                            <img src={roomImg} alt="Comfortable Family Room in Kelva Beach" className="w-full h-auto object-cover" />
+                            <img loading="lazy" src={roomImg} alt="Comfortable Family Room in Kelva Beach" className="w-full h-auto object-cover" />
                         </div>
 
                         {/* Couples Section */}
@@ -117,8 +117,8 @@ const BestResortsKelvaBeach: React.FC = () => {
                         </div>
 
                         <div className="my-10 rounded-2xl overflow-hidden shadow-lg grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <img src={jacuzziImg} alt="Private Jacuzzi Suite for Couples" className="w-full h-64 object-cover" />
-                            <img src={starImg} alt="Stargazing Suite with Retractable Roof" className="w-full h-64 object-cover" />
+                            <img loading="lazy" src={jacuzziImg} alt="Private Jacuzzi Suite for Couples" className="w-full h-64 object-cover" />
+                            <img loading="lazy" src={starImg} alt="Stargazing Suite with Retractable Roof" className="w-full h-64 object-cover" />
                         </div>
 
                         <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">More Than Just a Stay</h2>

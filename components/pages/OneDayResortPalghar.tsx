@@ -1,6 +1,7 @@
 import React from 'react';
 import { CheckCircle, Clock, Utensils, Waves, Calendar, Star, ArrowRight } from 'lucide-react';
-import homeImg from '../../coconuthome.webp';
+const homeImg = '/coconuthome.webp';
+import heroImg from '../../coconutboat.webp';
 import poolImg from '../../coconutpool.webp';
 import playImg from '../../coconutplay.webp';
 import jhulaImg from '../../coconutjhula.webp';
@@ -12,7 +13,7 @@ const OneDayResortPalghar: React.FC = () => {
             {/* Hero Section */}
             <div className="relative pt-32 pb-20 bg-emerald-900 overflow-hidden">
                 <div className="absolute inset-0 opacity-20">
-                    <img src={homeImg} alt="One Day Picnic in Palghar at Coconut Valley Resort" className="w-full h-full object-cover" />
+                    <img loading="lazy" src={heroImg} alt="One Day Picnic in Palghar at Coconut Valley Resort" className="w-full h-full object-cover" />
                 </div>
                 <div className="container relative mx-auto px-6 text-center z-10">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-800/50 text-emerald-100 text-sm font-medium mb-6">
@@ -42,7 +43,7 @@ const OneDayResortPalghar: React.FC = () => {
                         </p>
 
                         <div className="my-10 rounded-2xl overflow-hidden shadow-lg">
-                            <img src={aboutImg} alt="Scenic View of Coconut Groves near Palghar" className="w-full h-auto object-cover" />
+                            <img loading="lazy" src={aboutImg} alt="Scenic View of Coconut Groves near Palghar" className="w-full h-auto object-cover" />
                         </div>
 
                         <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Your Perfect One-Day Itinerary</h2>
@@ -83,8 +84,8 @@ const OneDayResortPalghar: React.FC = () => {
                         </div>
 
                         <div className="my-10 rounded-2xl overflow-hidden shadow-lg grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <img src={poolImg} alt="Swimming Pool Fun" className="w-full h-64 object-cover" />
-                            <img src={playImg} alt="Outdoor Games Area" className="w-full h-64 object-cover" />
+                            <img loading="lazy" src={poolImg} alt="Swimming Pool Fun" className="w-full h-64 object-cover" />
+                            <img loading="lazy" src={playImg} alt="Outdoor Games Area" className="w-full h-64 object-cover" />
                         </div>
 
                         <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Beyond the Pool: Activities for Everyone</h2>
@@ -93,7 +94,7 @@ const OneDayResortPalghar: React.FC = () => {
                         </p>
 
                         <div className="my-10 rounded-2xl overflow-hidden shadow-lg">
-                            <img src={jhulaImg} alt="Relaxing in the Gardens" className="w-full h-auto object-cover" />
+                            <img loading="lazy" src={jhulaImg} alt="Relaxing in the Gardens" className="w-full h-auto object-cover" />
                         </div>
 
                         <div className="bg-emerald-900 text-white rounded-3xl p-8 md:p-12 my-16 text-center">

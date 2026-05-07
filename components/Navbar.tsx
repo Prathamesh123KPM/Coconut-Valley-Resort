@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
   const isScrolledOrNotHome = isScrolled || !isHomePage;
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolledOrNotHome ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-6'}`}>
+    <nav className={`absolute w-full z-50 transition-all duration-500 ${isScrolledOrNotHome ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
           <img
@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
                             className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-emerald-50 transition-colors group/item"
                           >
                             <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0">
-                              <img src={room.image} alt={room.name} className="w-full h-full object-cover group-hover/item:scale-110 transition-transform" />
+                              <img loading="lazy" src={room.image} alt={room.name} className="w-full h-full object-cover group-hover/item:scale-110 transition-transform" />
                             </div>
                             <div className="flex flex-col">
                               <span className="text-sm font-bold text-slate-900 group-hover/item:text-emerald-700 transition-colors line-clamp-1">{room.name}</span>

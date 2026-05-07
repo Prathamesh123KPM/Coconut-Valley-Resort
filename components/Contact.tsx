@@ -1,10 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 
 const Contact: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    interest: 'General Inquiry',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const text = `*New Inquiry from Website*\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Phone:* ${formData.phone}\n*Interested In:* ${formData.interest}\n\n*Message:*\n${formData.message}`;
+    window.open(`https://wa.me/917219084299?text=${encodeURIComponent(text)}`, '_blank');
+  };
+
   return (
     <div className="w-full">
-      <form className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8 bg-white p-8 md:p-14 rounded-[3rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] border border-slate-100">
+      <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8 bg-white p-8 md:p-14 rounded-[3rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] border border-slate-100">
         <div className="md:col-span-2 mb-4">
           <h3 className="text-2xl font-bold text-slate-900 mb-2 font-serif text-center">Contact Our Kelva Beach Resort</h3>
           <p className="text-slate-500 text-center text-sm">We usually respond within a few hours. Looking forward to hosting you at our nature resort near Mumbai!</p>
@@ -14,6 +35,10 @@ const Contact: React.FC = () => {
           <label className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-400 group-focus-within:text-emerald-700 transition-colors">Full Name</label>
           <input
             type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
             className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-3 outline-none focus:border-emerald-600 transition-all duration-300 placeholder:text-slate-300"
             placeholder="Your name"
           />
@@ -23,6 +48,10 @@ const Contact: React.FC = () => {
           <label className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-400 group-focus-within:text-emerald-700 transition-colors">Email Address</label>
           <input
             type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
             className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-3 outline-none focus:border-emerald-600 transition-all duration-300 placeholder:text-slate-300"
             placeholder="email@example.com"
           />
@@ -32,6 +61,10 @@ const Contact: React.FC = () => {
           <label className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-400 group-focus-within:text-emerald-700 transition-colors">Phone Number</label>
           <input
             type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            required
             className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-3 outline-none focus:border-emerald-600 transition-all duration-300 placeholder:text-slate-300"
             placeholder="+91 00000 00000"
           />
@@ -40,7 +73,12 @@ const Contact: React.FC = () => {
         <div className="space-y-2 group">
           <label className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-400 group-focus-within:text-emerald-700 transition-colors">Interested In</label>
           <div className="relative">
-            <select className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-3 outline-none focus:border-emerald-600 transition-all duration-300 appearance-none cursor-pointer">
+            <select
+              name="interest"
+              value={formData.interest}
+              onChange={handleChange}
+              className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-3 outline-none focus:border-emerald-600 transition-all duration-300 appearance-none cursor-pointer"
+            >
               <option>General Inquiry</option>
               <option>Premium Room Booking</option>
               <option>Day Package Request</option>
@@ -56,6 +94,10 @@ const Contact: React.FC = () => {
         <div className="md:col-span-2 space-y-2 group">
           <label className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-400 group-focus-within:text-emerald-700 transition-colors">How can we help?</label>
           <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
             rows={4}
             className="w-full bg-transparent border-b-2 border-slate-100 px-0 py-3 outline-none focus:border-emerald-600 transition-all duration-300 placeholder:text-slate-300 resize-none text-sm"
             placeholder="Your message here..."
@@ -63,7 +105,7 @@ const Contact: React.FC = () => {
         </div>
 
         <div className="md:col-span-2 flex flex-col items-center mt-6">
-          <button type="button" className="group bg-emerald-900 hover:bg-emerald-800 text-white px-12 py-5 rounded-2xl font-bold flex items-center gap-4 transition-all transform hover:translate-y-[-2px] active:scale-[0.98] shadow-lg shadow-emerald-900/20 w-full sm:w-auto">
+          <button type="submit" className="group bg-emerald-900 hover:bg-emerald-800 text-white px-12 py-5 rounded-2xl font-bold flex items-center gap-4 transition-all transform hover:translate-y-[-2px] active:scale-[0.98] shadow-lg shadow-emerald-900/20 w-full sm:w-auto">
             <span>Send Message</span>
             <div className="w-8 h-8 rounded-full bg-emerald-700 flex items-center justify-center group-hover:translate-x-1 transition-transform">
               <Send size={14} />

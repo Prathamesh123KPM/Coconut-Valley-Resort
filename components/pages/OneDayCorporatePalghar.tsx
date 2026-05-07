@@ -3,8 +3,8 @@ import { Clock, Coffee, Utensils, Waves, Trophy, Music, ArrowRight, CheckCircle2
 import poolImg from '../../coconutpool.webp';
 import playImg from '../../coconutplay.webp';
 import vibeImg from '../../traiangleroom (1).webp';
-import gardenImg from '../../coconuthome.webp';
-import aboveImg from '../../coconutabove.webp';
+const gardenImg = '/coconuthome.webp';
+const aboveImg = '/coconutabove.webp';
 
 const OneDayCorporatePalghar: React.FC = () => {
     const itinerary = [
@@ -21,7 +21,7 @@ const OneDayCorporatePalghar: React.FC = () => {
             {/* Hero Section */}
             <div className="relative pt-32 pb-20 bg-emerald-950 overflow-hidden">
                 <div className="absolute inset-0 opacity-20">
-                    <img src={aboveImg} alt="Coconut Valley Resort Landscape" className="w-full h-full object-cover" />
+                    <img loading="lazy" src={aboveImg} alt="Coconut Valley Resort Landscape" className="w-full h-full object-cover" />
                 </div>
                 <div className="container relative mx-auto px-6 text-center z-10">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-800/50 text-emerald-100 text-sm font-medium mb-6 border border-emerald-700/50">
@@ -82,7 +82,7 @@ const OneDayCorporatePalghar: React.FC = () => {
                         </div>
 
                         <div className="my-10 rounded-2xl overflow-hidden shadow-lg">
-                            <img src={poolImg} alt="Corporate teams enjoying the pool" className="w-full h-auto object-cover" />
+                            <img loading="lazy" src={poolImg} alt="Corporate teams enjoying the pool" className="w-full h-auto object-cover" />
                             <div className="p-4 bg-emerald-900 text-white text-center text-sm">
                                 Our clean and spacious pool is the highlight of every one-day outing.
                             </div>
@@ -112,8 +112,8 @@ const OneDayCorporatePalghar: React.FC = () => {
                         </ul>
 
                         <div className="my-10 rounded-2xl overflow-hidden shadow-lg grid grid-cols-1 md:grid-cols-2 gap-2">
-                            <img src={playImg} alt="Morning games in the lawn" className="w-full h-48 object-cover" />
-                            <img src={gardenImg} alt="Relaxing in the garden" className="w-full h-48 object-cover" />
+                            <img loading="lazy" src={playImg} alt="Morning games in the lawn" className="w-full h-48 object-cover" />
+                            <img loading="lazy" src={gardenImg} alt="Relaxing in the garden" className="w-full h-48 object-cover" />
                         </div>
 
                         <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Local Flavors, Global Standards</h2>
@@ -121,7 +121,7 @@ const OneDayCorporatePalghar: React.FC = () => {
                             Food is often the most talked-about part of any picnic. We take pride in our Konkani-style lunch buffet, featuring fresh local fish (optional), organic vegetables from nearby farms, and our signature solkadhi. It's the kind of meal that makes everyone feel right at home.
                         </p>
 
-                        <div className="bg-emerald-900 text-white rounded-[2.5rem] p-10 my-16 border border-emerald-800 shadow-2xl relative overflow-hidden">
+                        <div className="bg-emerald-900 text-white rounded-[2.5rem] p-10 my-16 border border-emerald-800 shadow-2xl relative overflow-hidden text-center flex flex-col items-center">
                             <div className="absolute top-0 right-0 p-8 opacity-10">
                                 <Clock size={140} />
                             </div>
@@ -129,7 +129,7 @@ const OneDayCorporatePalghar: React.FC = () => {
                             <p className="text-emerald-100/80 text-lg mb-8 max-w-xl relative z-10">
                                 Book your corporate one-day outing at just ₹1200 per head (subject to group size). Professional service, pristine nature, and pure fun await.
                             </p>
-                            <div className="flex flex-wrap gap-4 relative z-10">
+                            <div className="flex flex-wrap justify-center gap-4 relative z-10">
                                 <a href="https://wa.me/917219084299" target="_blank" rel="noopener noreferrer" className="bg-white text-emerald-900 hover:bg-emerald-50 font-bold py-4 px-10 rounded-full transition-all flex items-center gap-2 shadow-lg">
                                     Get a Custom Quote
                                     <ArrowRight size={20} />

@@ -19,7 +19,7 @@ const Nearby: React.FC = () => {
           {ATTRACTIONS.map((attr, i) => (
             <div key={i} className="group cursor-pointer">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden relative mb-6 shadow-md group-hover:shadow-xl transition-all duration-500">
-                <img src={attr.image} alt={`${attr.name} nearby tourist attraction in Palghar`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img loading="lazy" src={attr.image} alt={`${attr.name} nearby tourist attraction in Palghar`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
                   <MapPin size={12} className="text-emerald-700" />
                   <span className="text-[10px] font-bold uppercase tracking-wider text-slate-800">{attr.distance}</span>

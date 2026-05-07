@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
               />
             </div>
             <p className="text-slate-400 leading-relaxed mb-8">
-              A Coconut Valley — Near Dandakhadi bridge, Kelva beach. Experience the perfect blend of luxury and nature in the heart of Palghar.
+              A Coconut Valley Resort — At Kelva Bazar, Near Danda Khadi Bridge, At. Kelwa, Tal & Dist-., Palghar, Maharashtra 401401
             </p>
             <div className="flex gap-4">
               <a href="https://www.facebook.com/acoconutvalley/" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-emerald-600 transition-colors group" target="_blank" rel="noopener noreferrer">
@@ -58,10 +58,10 @@ const Footer: React.FC = () => {
 
           <div>
             <h4 className="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-8">Contact Us</h4>
-            <ul className="space-y-4 text-sm text-slate-400">
+            <ul className="space-y-4 text-sm text-slate-400 mb-8">
               <li className="flex gap-3">
                 <MapPin size={18} className="text-emerald-500 shrink-0" />
-                <span>Near Dandakhadi bridge, Kelva beach, Tehsil & Dist – Palghar (Maharashtra)</span>
+                <span>At Kelva Bazar, Near Danda Khadi Bridge, At. Kelwa, Tal & Dist-., Palghar, Maharashtra 401401</span>
               </li>
               <li className="flex gap-3">
                 <Phone size={18} className="text-emerald-500 shrink-0" />
@@ -72,13 +72,34 @@ const Footer: React.FC = () => {
                 <span>acoconutvalley@gmail.com</span>
               </li>
             </ul>
+            <a 
+              href="https://www.google.com/maps/dir//Coconut+Valley+Resort+At+Kelva+Bazar,Near+Danda+Khadi+Bridge,At.Kelwa,Tal+%26+Dist-.,+Palghar,+Maharashtra+401401" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative block rounded-2xl overflow-hidden bg-white/5 border border-white/10 p-1 group cursor-pointer"
+            >
+              <iframe
+                title="Coconut Valley Resort Location Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.564491745265!2d72.71536757530635!3d19.4674726402773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7173e86c04f9f%3A0x8674d8e578c7921a!2sCoconut%20Valley%20Resort!5e0!3m2!1sen!2sin!4v1713856000000!5m2!1sen!2sin"
+                width="100%"
+                height="150"
+                style={{ border: 0, pointerEvents: 'none' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-xl grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
+              ></iframe>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-emerald-900/40 backdrop-blur-[2px]">
+                <span className="bg-white text-emerald-900 px-4 py-2 rounded-full text-xs font-bold shadow-xl">Open in Google Maps</span>
+              </div>
+            </a>
           </div>
         </div>
 
         <div className="pt-10 border-t border-white/5 flex flex-col items-center gap-6 text-slate-500 text-xs font-medium tracking-wide text-center">
           <p>COPYRIGHT © Coconut valley designed by kpm digital solutions</p>
           <p className="max-w-4xl leading-relaxed">
-            Near Dandakhadi bridge, Kelva beach Tehsil & Dist - Palghar (Maharashtra) | +91 72190 84299, 77700 77881 | acoconutvalley@gmail.com
+            At Kelva Bazar, Near Danda Khadi Bridge, At. Kelwa, Tal & Dist-., Palghar, Maharashtra 401401 | +91 72190 84299, 77700 77881 | acoconutvalley@gmail.com
           </p>
         </div>
       </div>

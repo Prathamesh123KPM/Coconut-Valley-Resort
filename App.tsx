@@ -1,51 +1,96 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import RoomDetailPage from './components/RoomDetailPage';
-import AboutPage from './components/pages/AboutPage';
-import RoomsPage from './components/pages/RoomsPage';
-import AmenitiesPage from './components/pages/AmenitiesPage';
-import EventsPage from './components/pages/EventsPage';
-import GalleryPage from './components/pages/GalleryPage';
-import ContactPage from './components/pages/ContactPage';
-import BestResortsPalghar from './components/pages/BestResortsPalghar';
-import BestResortsKelvaBeach from './components/pages/BestResortsKelvaBeach';
-import OneDayResortPalghar from './components/pages/OneDayResortPalghar';
-import FamilyResortPalghar from './components/pages/FamilyResortPalghar';
-import CorporatePicnicPalghar from './components/pages/CorporatePicnicPalghar';
-import OneDayCorporatePalghar from './components/pages/OneDayCorporatePalghar';
-import BlogsPage from './components/pages/BlogsPage';
+import { Suspense } from 'react';
+import { ArrowUp } from 'lucide-react';
+const Home = React.lazy(() => import('./components/Home'));
+const RoomDetailPage = React.lazy(() => import('./components/RoomDetailPage'));
+const AboutPage = React.lazy(() => import('./components/pages/AboutPage'));
+const RoomsPage = React.lazy(() => import('./components/pages/RoomsPage'));
+const AmenitiesPage = React.lazy(() => import('./components/pages/AmenitiesPage'));
+const EventsPage = React.lazy(() => import('./components/pages/EventsPage'));
+const GalleryPage = React.lazy(() => import('./components/pages/GalleryPage'));
+const ContactPage = React.lazy(() => import('./components/pages/ContactPage'));
+const BestResortsPalghar = React.lazy(() => import('./components/pages/BestResortsPalghar'));
+const BestResortsKelvaBeach = React.lazy(() => import('./components/pages/BestResortsKelvaBeach'));
+const OneDayResortPalghar = React.lazy(() => import('./components/pages/OneDayResortPalghar'));
+const FamilyResortPalghar = React.lazy(() => import('./components/pages/FamilyResortPalghar'));
+const CorporatePicnicPalghar = React.lazy(() => import('./components/pages/CorporatePicnicPalghar'));
+const OneDayCorporatePalghar = React.lazy(() => import('./components/pages/OneDayCorporatePalghar'));
+const BlogsPage = React.lazy(() => import('./components/pages/BlogsPage'));
+const EcoFriendlyLuxury = React.lazy(() => import('./components/pages/EcoFriendlyLuxury'));
+const DestinationWeddings = React.lazy(() => import('./components/pages/DestinationWeddings'));
+const CoastalCuisine = React.lazy(() => import('./components/pages/CoastalCuisine'));
+const HotelsKelvaBeachGuide = React.lazy(() => import('./components/pages/HotelsKelvaBeachGuide'));
+const BestResortKelvaBeachGetaway = React.lazy(() => import('./components/pages/BestResortKelvaBeachGetaway'));
+const NatureResortsPalgharKelva = React.lazy(() => import('./components/pages/NatureResortsPalgharKelva'));
 import Footer from './components/Footer';
 import ScrollToTop from './utils/ScrollToTop';
 import CanonicalUpdater from './components/CanonicalUpdater';
 
 function App() {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <Router>
       <CanonicalUpdater />
       <ScrollToTop />
       <div className="min-h-screen">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/rooms" element={<RoomsPage />} />
-          <Route path="/amenities" element={<AmenitiesPage />} />
-          <Route path="/events" element={<EventsPage />} />
-          <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/room/:id" element={<RoomDetailPage />} />
-          <Route path="/blog" element={<BlogsPage />} />
-          <Route path="/blog/best-resorts-in-palghar" element={<BestResortsPalghar />} />
-          <Route path="/blog/best-resorts-in-kelva-beach" element={<BestResortsKelvaBeach />} />
-          <Route path="/blog/best-one-day-resort-in-palghar" element={<OneDayResortPalghar />} />
-          <Route path="/blog/best-family-resort-near-palghar" element={<FamilyResortPalghar />} />
-          <Route path="/blog/corporate-picnic-resorts-near-mumbai" element={<CorporatePicnicPalghar />} />
-          <Route path="/blog/1-day-corporate-outing-near-mumbai" element={<OneDayCorporatePalghar />} />
-        </Routes>
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-emerald-800 font-bold">Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/rooms" element={<RoomsPage />} />
+            <Route path="/amenities" element={<AmenitiesPage />} />
+            <Route path="/events" element={<EventsPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/room/:id" element={<RoomDetailPage />} />
+            <Route path="/blog" element={<BlogsPage />} />
+            <Route path="/blog/best-resorts-in-palghar" element={<BestResortsPalghar />} />
+            <Route path="/blog/best-resorts-in-kelva-beach" element={<BestResortsKelvaBeach />} />
+            <Route path="/blog/best-one-day-resort-in-palghar" element={<OneDayResortPalghar />} />
+            <Route path="/blog/best-family-resort-near-palghar" element={<FamilyResortPalghar />} />
+            <Route path="/blog/corporate-picnic-resorts-near-mumbai" element={<CorporatePicnicPalghar />} />
+            <Route path="/blog/1-day-corporate-outing-near-mumbai" element={<OneDayCorporatePalghar />} />
+            <Route path="/blog/eco-friendly-luxury-palghar" element={<EcoFriendlyLuxury />} />
+            <Route path="/blog/destination-weddings-kelva-beach" element={<DestinationWeddings />} />
+            <Route path="/blog/coastal-cuisine-palghar" element={<CoastalCuisine />} />
+            <Route path="/blog/hotels-near-kelva-beach-palghar-guide" element={<HotelsKelvaBeachGuide />} />
+            <Route path="/blog/best-resort-near-kelva-beach-getaway" element={<BestResortKelvaBeachGetaway />} />
+            <Route path="/blog/nature-resorts-near-palghar-kelva" element={<NatureResortsPalgharKelva />} />
+          </Routes>
+        </Suspense>
         <Footer />
+
+        {/* Scroll to Top Button */}
+        <button
+          onClick={scrollToTop}
+          className={`fixed right-6 z-40 bg-slate-900 text-white p-3.5 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 hover:bg-emerald-700 active:scale-95 group flex items-center justify-center border border-white/20 ${
+            showScrollTop ? 'bottom-28 opacity-100 translate-y-0' : 'bottom-28 opacity-0 translate-y-10 pointer-events-none'
+          }`}
+          aria-label="Scroll to top"
+        >
+          <ArrowUp size={24} />
+          <span className="absolute right-full mr-4 bg-slate-900 text-white px-3 py-1.5 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-xl">
+            Back to Top
+          </span>
+        </button>
 
         {/* Floating WhatsApp Button */}
         <a

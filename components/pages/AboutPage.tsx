@@ -52,7 +52,7 @@ const AboutPage: React.FC = () => {
                                 </div>
                             </div>
                             <div className="rounded-3xl overflow-hidden shadow-2xl rotate-3 transform hover:rotate-0 transition-transform duration-700">
-                                <img src={coconutAbout} alt="Aerial overview of Coconut Valley Resort grounds and lush natural surroundings" className="w-full h-full object-cover" />
+                                <img loading="lazy" src={coconutAbout} alt="Aerial overview of Coconut Valley Resort grounds and lush natural surroundings" className="w-full h-full object-cover" />
                             </div>
                         </div>
                     </div>

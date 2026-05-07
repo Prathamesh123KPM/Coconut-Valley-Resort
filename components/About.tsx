@@ -30,7 +30,7 @@ const About: React.FC = () => {
             </h2>
             <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
               <p>
-                Coconut Valley Resort blends modern comfort with natural serenity. As a premier nature resort near Mumbai, just 2.5 hours away surrounded by lush greenery, it offers an exclusive escape for families, couples, and groups. Being a top-rated Kelva beach resort, we guarantee a peaceful beachfront experience.
+                Coconut Valley Resort blends modern comfort with natural serenity. Rated as the <strong className="text-slate-800">Best Resort Near Kelva Beach</strong> and located just 2.5 hours from Mumbai, it offers an exclusive escape for families, couples, and groups. If you're searching for <strong className="text-slate-800">Hotels Near Kelva Beach, Palghar</strong>, our <strong className="text-slate-800">Kelva Resort</strong> guarantees a peaceful beachfront experience surrounded by lush greenery.
               </p>
               <p>
                 Our philosophy centers around eco-friendly hospitality and nature-inspired design. We believe that true luxury is found in the simple moments: a sunset walk on Kelva beach, the sound of palm leaves rustling, and the warmth of genuine service at our resort in Palghar.

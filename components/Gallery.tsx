@@ -1,9 +1,9 @@
 import React from 'react';
 
 // General site images
-import coconutHome from '../coconuthome.webp';
+const coconutHome = '/coconuthome.webp';
 import coconutAbout from '../coconutabout.webp';
-import coconutAbove from '../coconutabove.webp';
+const coconutAbove = '/coconutabove.webp';
 import coconutGallery from '../coconutgallary.webp';
 import coconutJhula from '../coconutjhula.webp';
 import coconutPlay from '../coconutplay.webp';
@@ -19,7 +19,7 @@ import night1 from '../nightelegence (1).webp';
 import star1 from '../starparadisee (1).webp';
 import triangle1 from '../traiangleroom (1).webp';
 import deluxe1 from '../deluxeroom (1).webp';
-import woodenDorm from '../familydormitory.webp'; // Using this as a key visual
+import woodenDorm from '../Family Dorm 1 .jpg'; // Using this as a key visual
 import woodenRoom from '../woodenroom.webp';
 
 const Gallery: React.FC = () => {

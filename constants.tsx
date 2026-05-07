@@ -19,15 +19,14 @@ import {
 } from 'lucide-react';
 import { Room, Amenity, Event, Attraction, Package, Testimonial } from './types';
 import wed from './cv (1).webp';
-import familyDorm from './familydormitory.webp';
 import woodenRoomImg from './woodenroom.webp';
 import jacuzziBlissImg from './jacuzzibliss.webp';
 import starParadiseImg from './starparadise.webp';
 
 // New Imports
-import coconutHome from './coconuthome.webp';
+const coconutHome = '/coconuthome.webp';
 import coconutAbout from './coconutabout.webp';
-import coconutAbove from './coconutabove.webp';
+const coconutAbove = '/coconutabove.webp';
 import coconutGallery from './coconutgallary.webp';
 import coconutJhula from './coconutjhula.webp';
 import coconutPlay from './coconutplay.webp';
@@ -47,8 +46,9 @@ import night1 from './nightelegence (1).webp';
 import night2 from './nightelegence (2).webp';
 import night3 from './nightelegence (3).webp';
 import night4 from './nightelegence (4).webp';
-import star1 from './starparadisee (1).webp';
-import star2 from './starparadisee (2).webp';
+import starNew1 from './starparadise1.webp';
+import starNew2 from './starparadise2.webp';
+import starNew3 from './starparadise3.webp';
 import triangle1 from './traiangleroom (1).webp';
 import triangle2 from './traiangleroom (2).webp';
 import triangle3 from './traiangleroom (3).webp';
@@ -64,13 +64,19 @@ import woodenRoom1 from './woodenroom (1).webp';
 import woodenRoom2 from './woodenroom (2).webp';
 import woodenRoom3 from './woodenroom (3).webp';
 
+// Family Dormitory new images
+import familyDorm1 from './Family Dorm 1 .jpg';
+import familyDorm2 from './Family Dorm 2.jpg';
+import familyDorm3 from './Family Dorm3 .jpg';
+import familyDorm4 from './Family Dorm 4.jpg';
+
 export const ROOMS: Room[] = [
   {
     id: 'jacuzzi-bliss',
     name: 'Jacuzzi Bliss',
-    capacity: '2 Guests',
+    capacity: '2-3 Guests',
     description: 'Indulge in ultimate relaxation with our Jacuzzi Bliss rooms. These exclusive suites feature a private in-room jacuzzi, perfect for unwinding after a day of beach activities. Designed for couples seeking a romantic and rejuvenating escape.',
-    features: ['Private Jacuzzi', 'King-Size Bed', 'Mood Lighting', 'Garden View', 'Mini Bar', 'Smart TV'],
+    features: ['Air Conditioning', 'Private Jacuzzi', 'King-Size Bed', 'Mood Lighting', 'Garden View', 'Smart TV'],
     image: jacuzzi1,
     price: '₹7,000',
     gallery: [jacuzzi2, jacuzzi3, jacuzzi4]
@@ -78,9 +84,9 @@ export const ROOMS: Room[] = [
   {
     id: 'triangle-room',
     name: 'Triangle Room',
-    capacity: '2 Guests',
+    capacity: '2-6 Guests',
     description: 'Stay in our unique Triangle Rooms, designed with iconic A-frame architecture. These cozy cabins offer a snug and intimate atmosphere, perfect for couples. Large glass fronts let in plenty of natural light and offer stunning views of the surrounding greenery.',
-    features: ['A-Frame Design', 'Cozy Interior', 'Private Sit-out', 'Skylight', 'Queen Bed', 'Modern Bath'],
+    features: ['Air Conditioning', 'A-Frame Design', 'Cozy Interior', 'Sea View', 'Skylight', 'King Size Bed', 'Modern Bath', 'Sofa Cum Bed'],
     image: triangle1,
     price: '₹5,000',
     gallery: [triangle2, triangle3, triangle4]
@@ -88,19 +94,19 @@ export const ROOMS: Room[] = [
   {
     id: 'star-paradise',
     name: 'Star Paradise',
-    capacity: '2 Guests',
+    capacity: '2-6 Guests',
     description: 'Sleep under the stars in our Star Paradise suites. Featuring a retractable roof or expansive skylights, these rooms offer an unparalleled stargazing experience from the comfort of your king-sized bed. Perfect for romantic nights and astronomy enthusiasts.',
-    features: ['Retractable Roof', 'Telescope', 'King-Size Bed', 'Private Deck', 'Luxury Bath', 'Star Map Guide'],
-    image: starParadiseImg,
-    price: '₹8,500',
-    gallery: [star1, star2]
+    features: ['Air Conditioning', 'Retractable Roof', 'King-Size Bed', 'Private Deck', 'Luxury Bath'],
+    image: starNew2,
+    price: '₹6,000',
+    gallery: [starNew1, starNew2, starNew3]
   },
   {
     id: 'tropical-bliss',
     name: 'Tropical Bliss',
-    capacity: '2 Guests',
+    capacity: '2-4 Guests',
     description: 'Experience the ultimate tropical getaway in our Bliss rooms. Surrounded by lush coconut palms and vibrant flora, these rooms offer a perfect blend of comfort and nature. Enjoy the serene ambiance and wake up to the sound of birds.',
-    features: ['Tropical Decor', 'King-Size Bed', 'Private Balcony', 'Rain Shower', 'Garden View', 'Mini Bar'],
+    features: ['Air Conditioning', 'Tropical Decor', 'King-Size Bed', 'Private Balcony', 'Garden View'],
     image: tropical3,
     price: '₹6,500',
     gallery: [tropical2, tropical1]
@@ -108,9 +114,9 @@ export const ROOMS: Room[] = [
   {
     id: 'night-elegance',
     name: 'Night Elegance Suite',
-    capacity: '2 Guests',
+    capacity: '2-4 Guests',
     description: 'Designed specifically for romance, the Night Elegance Suite features intelligent ambient lighting systems that can be adjusted to match your mood. Located just steps away from our infinity pool, this suite offers a private entrance and a massive glass wall that brings the moonlit coconut groves into your living space.',
-    features: ['Smart Lighting System', 'Pool-side Access', 'Private Entrance', 'Rain Shower', 'Complimentary Wine', '4K Smart TV', 'Luxury Bathrobes'],
+    features: ['Air Conditioning', 'Smart Lighting System', 'Private Entrance', 'Rain Shower', 'Smart TV', 'Luxury Bathrobes'],
     image: night1,
     price: '₹9,000',
     gallery: [night2, night3, night4]
@@ -120,7 +126,7 @@ export const ROOMS: Room[] = [
     name: 'Deluxe Room',
     capacity: '2-3 Guests',
     description: 'Our Deluxe Rooms offer a perfect blend of modern comfort and traditional elegance. Spacious and well-appointed, these rooms provide a relaxing retreat with views of our lush gardens or the sparkling pool.',
-    features: ['King-Size Bed', 'Garden/Pool View', 'Work Desk', 'Tea/Coffee Maker', 'Modern Bathroom', 'High-Speed Wi-Fi'],
+    features: ['Air Conditioning', 'King-Size Bed', 'Modern Bathroom', 'High-Speed Wi-Fi'],
     image: deluxe2,
     price: '₹4,500',
     gallery: [deluxe1]
@@ -128,9 +134,9 @@ export const ROOMS: Room[] = [
   {
     id: 'wooden-room',
     name: 'Wooden Room',
-    capacity: '2 Guests',
+    capacity: '6-8 Guests',
     description: 'Immerse yourself in nature with our Wooden Rooms. Constructed with sustainable timber, these rooms offer a warm and earthy ambiance. Enjoy the rustic charm without sacrificing modern comforts.',
-    features: ['Timber Construction', 'Queen Bed', 'Private Porch', 'Garden View', 'Eco-Friendly Toiletries', 'Wi-Fi'],
+    features: ['Queen Bed', 'Air Conditioning', 'Private Porch', 'Garden View', 'Eco-Friendly Toiletries', 'Wi-Fi'],
     image: woodenRoom1,
     price: '₹5,500',
     gallery: [woodenRoom2, woodenRoom3]
@@ -138,22 +144,22 @@ export const ROOMS: Room[] = [
   {
     id: 'wooden-dormitory',
     name: 'Wooden Dormitory',
-    capacity: '8-10 Guests',
+    capacity: '8-12 Guests',
     description: 'Our Wooden Dormitory is perfect for large groups seeking a shared yet comfortable experience. Built with rich timber, it offers a rustic charm with modern amenities. Ideal for friends, families, or corporate retreats looking for bonding time.',
-    features: ['Shared Lounge', 'Air Conditioning', 'Lockers', 'Reading Lights', 'Garden Access'],
+    features: ['Shared Lounge', 'Air Conditioning', 'Reading Lights', 'Garden Access'],
     image: woodenDorm1,
-    price: '₹1,800 / person',
+    price: '₹1,800 / Per Person',
     gallery: [woodenDorm2, woodenDorm3, woodenDorm4]
   },
   {
     id: 'family-dormitory',
     name: 'Family Dormitory',
-    capacity: '6-8 Guests',
+    capacity: '8-15 Guests',
     description: 'A spacious and welcoming dormitory designed for families and large groups. Offering a comfortable and communal living experience with all modern amenities needed for a relaxing stay.',
-    features: ['Family-Friendly', 'Spacious Beds', 'Air Conditioning', 'Communal Lounge', 'High-Speed WiFi', 'Garden Access'],
-    image: familyDorm,
-    price: '₹2,000 / person',
-    gallery: [coconutPlay, coconutJhula]
+    features: ['Family-Friendly', 'Spacious Beds', 'Air Conditioning', 'High-Speed WiFi', 'Garden Access'],
+    image: familyDorm2,
+    price: '₹2,000 / Per Person',
+    gallery: [familyDorm1, familyDorm3, familyDorm4]
   }
 ];
 
@@ -210,7 +216,7 @@ export const ATTRACTIONS: Attraction[] = [
 export const PACKAGES: Package[] = [
   {
     name: 'Day Outing',
-    price: '₹1,200*',
+    price: '₹1,200* / Per Person',
     features: ['Breakfast & Lunch', 'Hi-Tea', 'Pool Access', 'Games Area'],
     bestFor: 'Schools & Groups'
   },

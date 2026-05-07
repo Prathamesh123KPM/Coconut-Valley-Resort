@@ -18,7 +18,7 @@ const Testimonials: React.FC = () => {
               <div className="flex -space-x-4">
                 {[1, 2, 3, 4].map(i => (
                   <div key={i} className="w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-slate-200">
-                    <img src={`https://picsum.photos/id/${100 + i}/100/100`} alt={`Happy guest ${i + 1} testimonial photo`} />
+                    <img loading="lazy" src={`https://picsum.photos/id/${100 + i}/100/100`} alt={`Happy guest ${i + 1} testimonial photo`} />
                   </div>
                 ))}
               </div>
@@ -41,7 +41,7 @@ const Testimonials: React.FC = () => {
                 <Quote size={40} className="text-emerald-200 absolute top-8 right-8" />
                 <div className="relative z-10">
                   <div className="flex items-center gap-4 mb-6">
-                    <img src={testi.image} alt={`Portrait of ${testi.name}`} className="w-14 h-14 rounded-full object-cover" />
+                    <img loading="lazy" src={testi.image} alt={`Portrait of ${testi.name}`} className="w-14 h-14 rounded-full object-cover" />
                     <div>
                       <h5 className="font-bold text-slate-900">{testi.name}</h5>
                       <p className="text-xs text-slate-500">{testi.location}</p>
