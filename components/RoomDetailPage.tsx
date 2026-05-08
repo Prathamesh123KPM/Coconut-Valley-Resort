@@ -9,7 +9,8 @@ import {
     Calendar,
     Phone,
     ArrowLeft,
-    Play
+    Play,
+    ArrowRight
 } from 'lucide-react';
 import RoomSwitcher from './RoomSwitcher';
 
@@ -112,7 +113,7 @@ const RoomDetailPage: React.FC = () => {
                                 </button>
                             ))}
                         </div>
-                        
+
                         {/* Integrated Booking Card (Moved from right column for better layout balance) */}
                         <div className="bg-slate-900 rounded-[2rem] p-8 md:p-10 text-white shadow-2xl mt-12 lg:mt-auto hidden lg:block">
                             <h4 className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest mb-6">Booking Details</h4>
@@ -198,25 +199,52 @@ const RoomDetailPage: React.FC = () => {
 
                         {/* Room Tour Video Section */}
                         <div className="mt-12 lg:mt-auto">
-                            <h4 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2 underline decoration-emerald-200 decoration-4 underline-offset-8">
-                                <Play size={18} className="text-emerald-700" />
-                                Room Tour
-                            </h4>
-                            <a href="https://www.youtube.com/@acoconutvalleyresort2219" target="_blank" rel="noopener noreferrer" className="block relative aspect-video rounded-[2.5rem] overflow-hidden group shadow-2xl">
-                                <img 
-                                    src={room.image} 
-                                    alt={`${room.name} Room Tour`} 
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                />
-                                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex flex-col items-center justify-center">
-                                    <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform shadow-2xl">
-                                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-emerald-700 pl-1 shadow-inner">
-                                            <Play size={20} className="fill-current" />
+                            <div className="flex justify-between items-center mb-6">
+                                <h4 className="text-lg font-bold text-slate-900 flex items-center gap-2 underline decoration-emerald-200 decoration-4 underline-offset-8">
+                                    <Play size={18} className="text-emerald-700" />
+                                    Room Tour
+                                </h4>
+                                <a
+                                    href="https://youtube.com/playlist?list=PLIxYNmZT5l1LwGv5twqCqMxN5Lby9YKWG&si=8Bmprl-PtDhtJeZH"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-[10px] sm:text-xs font-bold text-emerald-600 hover:text-emerald-500 flex items-center gap-1 uppercase tracking-wider bg-emerald-50 px-3 py-1.5 rounded-full transition-colors"
+                                >
+                                    Playlist <ArrowRight size={12} />
+                                </a>
+                            </div>
+                            {(() => {
+                                const videoLinks: Record<string, string> = {
+                                    'Wooden Room': 'https://www.youtube.com/watch?v=Uj_8iLiFDQ4&list=PLIxYNmZT5l1LwGv5twqCqMxN5Lby9YKWG&index=1',
+                                    'Wooden Dormitory': 'https://www.youtube.com/watch?v=X_tikADywtg&list=PLIxYNmZT5l1LwGv5twqCqMxN5Lby9YKWG&index=2',
+                                    'Deluxe Room': 'https://www.youtube.com/watch?v=as3gpVEzz3k&list=PLIxYNmZT5l1LwGv5twqCqMxN5Lby9YKWG&index=3',
+                                    'Night Elegance Suite': 'https://www.youtube.com/watch?v=IfZVAyfy2sg&list=PLIxYNmZT5l1LwGv5twqCqMxN5Lby9YKWG&index=4',
+                                    'Family Dormitory': 'https://www.youtube.com/watch?v=4gj_YTN42gY&list=PLIxYNmZT5l1LwGv5twqCqMxN5Lby9YKWG&index=5',
+                                    'Jacuzzi Bliss': 'https://www.youtube.com/watch?v=JPvd-QjiAH0&list=PLIxYNmZT5l1LwGv5twqCqMxN5Lby9YKWG&index=6',
+                                    'Tropical Bliss': 'https://www.youtube.com/watch?v=2xB8acnZ698&list=PLIxYNmZT5l1LwGv5twqCqMxN5Lby9YKWG&index=7',
+                                    'Star Paradise': 'https://www.youtube.com/watch?v=THWYXM1rfiY&list=PLIxYNmZT5l1LwGv5twqCqMxN5Lby9YKWG&index=10',
+                                    'Triangle Room': 'https://www.youtube.com/watch?v=TLfi4LyTVac&list=PLIxYNmZT5l1LwGv5twqCqMxN5Lby9YKWG&index=11'
+                                };
+                                const videoLink = videoLinks[room.name] || "https://www.youtube.com/@acoconutvalleyresort2219";
+
+                                return (
+                                    <a href={videoLink} target="_blank" rel="noopener noreferrer" className="block relative aspect-video rounded-[2.5rem] overflow-hidden group shadow-2xl">
+                                        <img
+                                            src={room.image}
+                                            alt={`${room.name} Room Tour`}
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                        />
+                                        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex flex-col items-center justify-center">
+                                            <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform shadow-2xl">
+                                                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-emerald-700 pl-1 shadow-inner">
+                                                    <Play size={20} className="fill-current" />
+                                                </div>
+                                            </div>
+                                            <h4 className="text-white font-bold tracking-wide">Watch Tour</h4>
                                         </div>
-                                    </div>
-                                    <h4 className="text-white font-bold tracking-wide">Watch Tour</h4>
-                                </div>
-                            </a>
+                                    </a>
+                                );
+                            })()}
                         </div>
 
                         {/* Mobile Booking Card (Only visible on mobile/tablet to maintain logical order) */}
